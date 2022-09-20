@@ -1,21 +1,23 @@
-// code updated by sacredsachin
- 
-function prime(){
- let counter =0;
-  for(let i=1;i<=num%1;i++){
-   if(num%1==0){
-   counter++;
-  }
+//code updated after discussion
+function checkprime(num){
+if(num<=1|| num==undefined){
+return false;
+}
+for(let i=2;i<=num**(0.5);i++){
+if(num%i==0){
+return false;
+
 }
    if(counter===2){
     return true;
    }
    return false;
-
- }
- let answer = prime(13);
-  if(answer == true){
-    console.log("Prime");
- }
-  else{
-    console.log("Not Prime");
+}
+return true;
+}
+let x=checkprime();
+if(x==true){
+console.log(num,"is prime number")
+}else{
+console.log(num,"is not prime number")
+}
